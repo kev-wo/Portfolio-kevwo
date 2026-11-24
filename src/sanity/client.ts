@@ -7,5 +7,7 @@ export const client = createClient({
   projectId: projectId || "placeholder",
   dataset,
   apiVersion,
-  useCdn: true,
+  // Fetch live data on each ISR revalidation so published edits show up promptly.
+  useCdn: false,
+  perspective: "published",
 });

@@ -10,6 +10,9 @@ import { Nav } from "@/components/site/nav";
 import { getPortfolioData } from "@/lib/data";
 import { getDict, isLocale } from "@/lib/i18n";
 
+// Re-fetch CMS content at most once per minute so published edits appear live.
+export const revalidate = 60;
+
 export default async function PortfolioPage({
   params,
 }: {

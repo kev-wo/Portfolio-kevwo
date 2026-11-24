@@ -13,8 +13,6 @@ import {
 import { seed } from "./seed";
 import type { ImageField, PortfolioData } from "./types";
 
-export const revalidate = 60; // refresh CMS content at most once a minute
-
 // Resolve any Sanity image object (or pass-through string URL) to a flat URL
 // string so every downstream component only deals with `string | null`.
 function img(source: ImageField | undefined, width = 1200): string | null {
